@@ -16,6 +16,7 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
+
 <body>
 
 <!-- ================= NAVBAR ================= -->
@@ -56,29 +57,39 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
         <ul>
 
-            <li class="<?= ($category == 'travel') ? 'active' : ''; ?>">
-                <i class="fa-solid fa-suitcase"></i>
-                <a href="shop.php?category=travel#travel">Travel Bags</a>
+            <li class="active" data-target="travel">
+                <a href="#travel">
+                    <i class="fa-solid fa-suitcase"></i>
+                    <span>Travel Bags</span>
+                </a>
             </li>
 
-            <li class="<?= ($category == 'men') ? 'active' : ''; ?>">
-                <i class="fa-solid fa-briefcase"></i>
-                <a href="shop.php?category=men#men">Men's Bags</a>
+            <li data-target="men">
+                <a href="#men">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Men's Bags</span>
+                </a>
             </li>
 
-            <li class="<?= ($category == 'women') ? 'active' : ''; ?>">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <a href="shop.php?category=women#women">Women's Bags</a>
+            <li data-target="women">
+                <a href="#women">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Women's Bags</span>
+                </a>
             </li>
 
-            <li class="<?= ($category == 'backpack') ? 'active' : ''; ?>">
-                <i class="fa-solid fa-backpack"></i>
-                <a href="shop.php?category=backpack#backpack">Backpacks</a>
+            <li data-target="backpack">
+                <a href="#backpack">
+                    <i class="fa-solid fa-suitcase"></i>
+                    <span>Backpacks</span>
+                </a>
             </li>
 
-            <li class="<?= ($category == 'wallet') ? 'active' : ''; ?>">
-                <i class="fa-solid fa-wallet"></i>
-                <a href="shop.php?category=wallet#wallet">Wallet Bags</a>
+            <li data-target="wallet">
+                <a href="#wallet">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Wallet Bags</span>
+                </a>
             </li>
 
         </ul>
@@ -107,11 +118,12 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/travel1.jpg" alt="">
+                    <img src="images/travel1.webp" alt="">
 
-                    <h3>Explorer Duffel</h3>
+                    <h3>FPM Bank Centenary</h3>
+                    <h3>55 Spinner</h3>
 
-                    <p>₱2,999</p>
+                    <p>₱125,555.00</p>
 
                     <button>View Product</button>
 
@@ -121,11 +133,12 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/travel2.jpg" alt="">
+                    <img src="images/travel2.webp" alt="">
 
-                    <h3>Cabin Travel Bag</h3>
+                    <h3>Safari</h3>
+                    <h3>Carry-On - 4 Wheels</h3>
 
-                    <p>₱3,299</p>
+                    <p>₱132,555.00</p>
 
                     <button>View Product</button>
 
@@ -135,11 +148,12 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/travel3.jpg" alt="">
+                    <img src="images/travel3.webp" alt="">
 
-                    <h3>Rolling Travel Bag</h3>
+                    <h3>Centenary</h3>
+                    <h3>Carry-On - 4 Wheels</h3>
 
-                    <p>₱4,499</p>
+                    <p>₱132,555.00</p>
 
                     <button>View Product</button>
 
@@ -149,11 +163,12 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/travel4.jpg" alt="">
+                    <img src="images/travel4.webp" alt="">
 
-                    <h3>Weekender Bag</h3>
+                    <h3>Peanuts</h3>
+                    <h3>Carry-On - 4 Wheels</h3>
 
-                    <p>₱2,899</p>
+                    <p>₱160,510.00</p>
 
                     <button>View Product</button>
 
@@ -163,11 +178,12 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/travel5.jpg" alt="">
+                    <img src="images/travel5.webp" alt="">
 
-                    <h3>Adventure Duffel</h3>
+                    <h3>Safari</h3>
+                    <h3>XL Check-In - 4 Wheels</h3>
 
-                    <p>₱3,599</p>
+                    <p>₱209,470.00</p>
 
                     <button>View Product</button>
 
@@ -177,11 +193,12 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/travel6.jpg" alt="">
+                    <img src="images/travel6.webp" alt="">
 
-                    <h3>Travel Organizer</h3>
+                    <h3>Centenary</h3>
+                    <h3>Large Check-In - 4 Wheels</h3>
 
-                    <p>₱1,299</p>
+                    <p>₱174,500.00</p>
 
                     <button>View Product</button>
 
@@ -206,44 +223,44 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
             <div class="horizontal-products">
 
                 <div class="card">
-                    <img src="images/men1.jpg" alt="">
-                    <h3>Executive Briefcase</h3>
-                    <p>₱4,299</p>
+                    <img src="images/men1.avif" alt="">
+                    <h3>Trio Messenger</h3>
+                    <p>₱178,000.00</p>
                     <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/men2.jpg" alt="">
-                    <h3>Leather Messenger</h3>
-                    <p>₱3,799</p>
+                    <img src="images/men2.avif" alt="">
+                    <h3>Discovery Bumbag PM</h3>
+                    <p>₱129,000.00</p>
                     <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/men3.jpg" alt="">
-                    <h3>Business Backpack</h3>
-                    <p>₱3,499</p>
+                    <img src="images/men3.avif" alt="">
+                    <h3>Avenue Slingbag PM</h3>
+                    <p>₱137,000.00</p>
                     <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/men4.jpg" alt="">
-                    <h3>Crossbody Bag</h3>
-                    <p>₱2,199</p>
+                    <img src="images/men4.avif" alt="">
+                    <h3>Keepall Bandoulière 35</h3>
+                    <p>₱168,000.00</p>
                     <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/men5.jpg" alt="">
-                    <h3>Laptop Bag</h3>
-                    <p>₱2,699</p>
+                    <img src="images/men5.avif" alt="">
+                    <h3>Courrier Messenger</h3>
+                    <p>₱182,000.00</p>
                     <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/men6.jpg" alt="">
-                    <h3>Canvas Messenger</h3>
-                    <p>₱2,399</p>
+                    <img src="images/men6.avif" alt="">
+                    <h3>District PM</h3>
+                    <p>₱129,000.00</p>
                     <button>View Product</button>
                 </div>
 
@@ -519,5 +536,34 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
 </div>
 
+<script>
+const sections = document.querySelectorAll(".category-section");
+const menuItems = document.querySelectorAll(".shop-sidebar li");
+
+function updateActiveCategory() {
+
+    let currentSection = "";
+
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top <= 180 && rect.bottom >= 180) {
+            currentSection = section.id;
+        }
+    });
+
+    menuItems.forEach(item => {
+        item.classList.remove("active");
+    });
+
+    if(currentSection){
+        document.querySelector(`.shop-sidebar li[data-target="${currentSection}"]`)?.classList.add("active");
+    }
+
+}
+
+window.addEventListener("scroll", updateActiveCategory);
+window.addEventListener("load", updateActiveCategory);
+</script>
 </body>
 </html>

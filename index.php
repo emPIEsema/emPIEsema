@@ -74,7 +74,7 @@
 
         </p>
 
-        <a href="#" class="btn">
+        <a href="shop.php" class="btn">
             Shop Now
         </a>
 
