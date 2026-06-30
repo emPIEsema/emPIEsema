@@ -130,35 +130,74 @@ nav ul li a:hover{
    FEATURES
 ========================== */
 
-.features{
+.about-store{
     width:90%;
-    margin:auto;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:18px;
-    margin-bottom:60px;
+    margin:60px auto;
+    background:#fff;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
-.feature{
-    background:#e8d9be;
-    width:140px;
-    height:140px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.about-store h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:52px;
+    color:#333;
+    margin-bottom:15px;
+}
+
+.about-store p{
+    font-size:17px;
+    line-height:1.8;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.about-features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:35px;
+}
+
+.feature-box{
+    background:#F8F3EA;
+    padding:25px;
+    border-radius:15px;
     text-align:center;
-    padding:20px;
-    font-size:14px;
-    font-weight:600;
-    transition:.3s;
 }
 
-.feature:hover{
-    transform:translateY(-8px);
+.feature-box i{
+    font-size:42px;
+    color:#C7A66A;
+    margin-bottom:15px;
 }
 
+.feature-box h3{
+    margin-bottom:10px;
+    color:#333;
+}
+
+.feature-box p{
+    font-size:15px;
+    margin:0;
+}
+
+@media(max-width:768px){
+
+.about-features{
+    grid-template-columns:1fr;
+}
+
+.about-store{
+    padding:30px;
+}
+
+.about-store h1{
+    font-size:40px;
+}
+
+}
 /* ==========================
    PRODUCTS
 ========================== */
@@ -462,6 +501,193 @@ footer{
 .why h2,
 .newsletter h2{
     font-size:40px;
+}
+
+}
+
+.shop-page{
+    width:90%;
+    margin:60px auto;
+}
+
+.shop-page h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    margin-bottom:40px;
+}
+
+/* ===========================
+   SHOP PAGE
+=========================== */
+
+.shop-container{
+    width:95%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:250px 1fr;
+    gap:40px;
+}
+
+/* Sidebar */
+
+.shop-sidebar{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    height:fit-content;
+    position:sticky;
+    top:120px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.shop-sidebar ul{
+    list-style:none;
+}
+
+.shop-sidebar li{
+    margin-bottom:15px;
+}
+
+.shop-sidebar li a{
+    display:block;
+    padding:15px;
+    border-radius:10px;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+.shop-sidebar li i{
+    width:25px;
+}
+
+.shop-sidebar li:hover a,
+.shop-sidebar .active a{
+    background:#C7A66A;
+    color:white;
+}
+
+/* Content */
+
+.shop-content{
+    width:100%;
+}
+
+/* Category */
+
+.category-section{
+    margin-bottom:70px;
+}
+
+.category-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.category-header h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:42px;
+    color:#333;
+}
+
+.category-header a{
+    color:#C7A66A;
+    font-weight:600;
+}
+
+.category-header a:hover{
+    text-decoration:underline;
+}
+
+/* Products */
+
+.horizontal-products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+/* Card */
+
+.card{
+    background:#fff;
+    border-radius:18px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#C7A66A;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.card button{
+    background:#C7A66A;
+    color:#fff;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card button:hover{
+    background:#a9854b;
+}
+
+/* Responsive */
+
+@media(max-width:1100px){
+
+.shop-container{
+    grid-template-columns:1fr;
+}
+
+.shop-sidebar{
+    position:static;
+}
+
+.horizontal-products{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.horizontal-products{
+    grid-template-columns:1fr;
+}
+
+.category-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.category-header h2{
+    font-size:34px;
 }
 
 }

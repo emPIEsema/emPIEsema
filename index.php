@@ -26,7 +26,7 @@
 
         <ul>
 
-            <li><a href="#">Shop</a></li>
+            <li><a href="shop.php">Shop</a></li>
 
             <li><a href="#">Collections</a></li>
 
@@ -84,19 +84,49 @@
 
 <!-- ================= FEATURES ================= -->
 
-<section class="features">
+<section class="about-store">
 
-    <div class="feature">✈ Travel Ready</div>
+    <h1>Welcome to emPIEsema</h1>
 
-    <div class="feature">🧳 Premium Quality</div>
+    <p>
+        <strong>Every Journey. Every Bag. Every You.</strong>
+    </p>
 
-    <div class="feature">🎒 Everyday Carry</div>
+    <p>
+        emPIEsema is your trusted destination for premium-quality bags designed
+        for every lifestyle. Whether you're traveling, heading to work, going
+        to school, or simply looking for an everyday companion, we have the
+        perfect bag for you.
+    </p>
 
-    <div class="feature">💼 Business Bags</div>
+    <p>
+        Our collection includes travel bags, men's bags, women's bags,
+        backpacks, and wallet bags that combine style, durability, and
+        functionality. Every product is carefully selected to provide comfort,
+        quality, and value for every customer.
+    </p>
 
-    <div class="feature">🌧 Waterproof</div>
+    <div class="about-features">
 
-    <div class="feature">⭐ Best Sellers</div>
+        <div class="feature-box">
+            <i class="fa-solid fa-suitcase"></i>
+            <h3>Premium Quality</h3>
+            <p>Built with durable materials for everyday use and travel.</p>
+        </div>
+
+        <div class="feature-box">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Fast Delivery</h3>
+            <p>Reliable nationwide shipping to your doorstep.</p>
+        </div>
+
+        <div class="feature-box">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Secure Shopping</h3>
+            <p>Safe checkout and trusted customer service.</p>
+        </div>
+
+    </div>
 
 </section>
 
@@ -108,23 +138,17 @@
 
         <h2>Categories</h2>
 
-        <ul>
+        <ul class="category-list">
 
-            <li>Travel Bags</li>
+            <li><a href="#">Travel Bags</a></li>
 
-            <li>Luggage</li>
+            <li><a href="#">Men's Bags</a></li>
 
-            <li>Backpacks</li>
+            <li><a href="#">Women's Bags</a></li>
 
-            <li>Everyday Bags</li>
+            <li><a href="#">Backpacks</a></li>
 
-            <li>Sling Bags</li>
-
-            <li>Tote Bags</li>
-
-            <li>Laptop Bags</li>
-
-            <li>Accessories</li>
+            <li><a href="#">Wallet Bags</a></li>
 
         </ul>
 
