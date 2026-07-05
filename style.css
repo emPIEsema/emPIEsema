@@ -464,6 +464,24 @@ footer{
     font-size:40px;
 }
 
+.about-store{
+    padding:70px 20px;
+}
+
+.about-store h1{
+    font-size:42px;
+}
+
+.about-features{
+    flex-direction:column;
+    align-items:center;
+}
+
+.feature-box{
+    width:100%;
+    max-width:350px;
+}
+
 }
 
 .shop-page{
@@ -652,3 +670,66 @@ footer{
 }
 
 }
+
+/* ==========================
+   ABOUT STORE
+========================== */
+
+.about-store{
+    width:90%;
+    margin:80px auto;
+    text-align:center;
+}
+
+.about-store h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:52px;
+    color:#333;
+    margin-bottom:15px;
+}
+
+.about-store > p{
+    max-width:900px;
+    margin:10px auto;
+    color:#555;
+    line-height:1.8;
+}
+
+.about-features{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:50px;
+    flex-wrap:wrap;
+}
+
+.feature-box{
+    background:#fff;
+    width:320px;
+    padding:35px 25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-box:hover{
+    transform:translateY(-8px);
+}
+
+.feature-box i{
+    font-size:45px;
+    color:#C7A66A;
+    margin-bottom:20px;
+}
+
+.feature-box h3{
+    font-size:24px;
+    margin-bottom:15px;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.feature-box p{
+    margin:0;
+    color:#666;
+}
+

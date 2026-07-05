@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>emPIEsema | Every Journey. Every Bag. Every You.</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -174,7 +174,7 @@
 
                 <p>₱129,000.00</p>
 
-                <button>View Product</button>
+                <a href="product.php" class="view-btn">View Product</a>
 
             </div>
 

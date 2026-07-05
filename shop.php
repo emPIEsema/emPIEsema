@@ -283,44 +283,44 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
             <div class="horizontal-products">
 
                 <div class="card">
-                    <img src="images/women1.jpg" alt="">
-                    <h3>Elegant Tote</h3>
-                    <p>₱2,499</p>
+                    <img src="images/women1.avif" alt="">
+                    <h3>Speedy Bandoulière 20</h3>
+                    <p>₱143,000.00</p>
                     <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/women2.jpg" alt="">
-                    <h3>Classic Handbag</h3>
-                    <p>₱2,899</p>
+                    <img src="images/women2.avif" alt="">
+                    <h3>Nano Madeleine</h3>
+                    <p>₱175,000.00</p>
                     <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/women3.jpg" alt="">
-                    <h3>Shoulder Bag</h3>
-                    <p>₱2,299</p>
+                    <img src="images/women3.avif" alt="">
+                    <h3>Wallet On Chain Ivy</h3>
+                    <p>₱142,000.00</p>
                     <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/women4.jpg" alt="">
-                    <h3>Mini Crossbody</h3>
-                    <p>₱1,999</p>
+                    <img src="images/women4.avif" alt="">
+                    <h3>Squire East West</h3>
+                    <p>₱144,000.00  </p>
                     <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/women5.jpg" alt="">
-                    <h3>Fashion Tote</h3>
-                    <p>₱2,399</p>
+                    <img src="images/women5.avif" alt="">
+                    <h3>Vanity Chain Pouch</h3>
+                    <p>₱190,000.00</p>
                     <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/women6.jpg" alt="">
-                    <h3>Satchel Bag</h3>
-                    <p>₱2,699</p>
+                    <img src="images/women6.avif" alt="">
+                    <h3>Trunkie East West</h3>
+                    <p>₱191,000.00</p>
                     <button>View Product</button>
                 </div>
 
@@ -346,11 +346,11 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/backpack1.jpg" alt="Urban Backpack">
+                    <img src="images/backpack1.avif" alt="Prada Explore Re-Nylon and leather backpack">
 
-                    <h3>Urban Backpack</h3>
+                    <h3>Prada Explore Re-Nylon and leather backpack</h3>
 
-                    <p>₱2,499</p>
+                    <p>₱215,300.50</p>
 
                     <button>View Product</button>
 
@@ -360,11 +360,11 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/backpack2.jpg" alt="Laptop Backpack">
+                    <img src="images/backpack2.avif" alt="Re-Nylon backpack">
 
-                    <h3>Laptop Backpack</h3>
+                    <h3>Re-Nylon backpack</h3>
 
-                    <p>₱2,999</p>
+                    <p>₱190,700.00</p>
 
                     <button>View Product</button>
 
@@ -374,11 +374,11 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/backpack3.jpg" alt="Travel Backpack">
+                    <img src="images/backpack3.avif" alt="Prada Explore leather backpack">
 
-                    <h3>Travel Backpack</h3>
+                    <h3>Prada Explore leather backpack</h3>
 
-                    <p>₱3,299</p>
+                    <p>₱369,100.00</p>
 
                     <button>View Product</button>
 
@@ -388,11 +388,11 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/backpack4.jpg" alt="School Backpack">
+                    <img src="images/backpack4.avif" alt="Re-Nylon and Saffiano leather backpack">
 
-                    <h3>School Backpack</h3>
+                    <h3>Re-Nylon and Saffiano leather backpack</h3>
 
-                    <p>₱1,899</p>
+                    <p>₱175,300.00</p>
 
                     <button>View Product</button>
 
@@ -402,11 +402,11 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/backpack5.jpg" alt="Hiking Backpack">
+                    <img src="images/backpack5.avif" alt="Prada Speedrock Re-Nylon and leather backpack">
 
-                    <h3>Hiking Backpack</h3>
+                    <h3>Prada Speedrock Re-Nylon and leather backpack</h3>
 
-                    <p>₱3,799</p>
+                    <p>₱200,100.00</p>
 
                     <button>View Product</button>
 
@@ -416,11 +416,11 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/backpack6.jpg" alt="Anti-Theft Backpack">
+                    <img src="images/backpack6.avif" alt="Leather backpack">
 
-                    <h3>Anti-Theft Backpack</h3>
+                    <h3>Leather backpack</h3>
 
-                    <p>₱2,799</p>
+                    <p>₱319,900.00</p>
 
                     <button>View Product</button>
 
