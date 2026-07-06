@@ -118,14 +118,14 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/travel1.webp" alt="">
+                    <a href="product.php?id=10" class="product-link">
+                        <img src="images/travel1.webp" alt="55 Spinner">
+                    </a>
 
                     <h3>FPM Bank Centenary</h3>
                     <h3>55 Spinner</h3>
 
                     <p>₱125,555.00</p>
-
-                    <button>View Product</button>
 
                 </div>
 
@@ -133,14 +133,14 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/travel2.webp" alt="">
+                    <a href="product.php?id=11" class="product-link">
+                        <img src="images/travel2.webp" alt="Carry-On - 4 Wheels">
+                    </a>
 
                     <h3>Safari</h3>
                     <h3>Carry-On - 4 Wheels</h3>
 
                     <p>₱132,555.00</p>
-
-                    <button>View Product</button>
 
                 </div>
 
@@ -148,14 +148,14 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/travel3.webp" alt="">
+                    <a href="product.php?id=12" class="product-link">
+                        <img src="images/travel3.webp" alt="Carry-On - 4 Wheels">
+                    </a>
 
                     <h3>Centenary</h3>
                     <h3>Carry-On - 4 Wheels</h3>
 
                     <p>₱132,555.00</p>
-
-                    <button>View Product</button>
 
                 </div>
 
@@ -163,14 +163,14 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/travel4.webp" alt="">
+                    <a href="product.php?id=13" class="product-link">
+                        <img src="images/travel4.webp" alt="Carry-On - 4 Wheels">
+                    </a>
 
                     <h3>Peanuts</h3>
                     <h3>Carry-On - 4 Wheels</h3>
 
                     <p>₱160,510.00</p>
-
-                    <button>View Product</button>
 
                 </div>
 
@@ -178,14 +178,14 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/travel5.webp" alt="">
+                    <a href="product.php?id=14" class="product-link">
+                        <img src="images/travel5.webp" alt="XL Check-In - 4 Wheels">
+                    </a>
 
                     <h3>Safari</h3>
                     <h3>XL Check-In - 4 Wheels</h3>
 
                     <p>₱209,470.00</p>
-
-                    <button>View Product</button>
 
                 </div>
 
@@ -193,14 +193,14 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/travel6.webp" alt="">
+                    <a href="product.php?id=15" class="product-link">
+                        <img src="images/travel6.webp" alt="Large Check-In - 4 Wheels<">
+                    </a>
 
                     <h3>Centenary</h3>
                     <h3>Large Check-In - 4 Wheels</h3>
 
                     <p>₱174,500.00</p>
-
-                    <button>View Product</button>
 
                 </div>
 
@@ -223,45 +223,51 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
             <div class="horizontal-products">
 
                 <div class="card">
-                    <img src="images/men1.avif" alt="">
+                    <a href="product.php?id=16" class="product-link">
+                        <img src="images/men1.avif" alt="">
+                    </a>
                     <h3>Trio Messenger</h3>
                     <p>₱178,000.00</p>
-                    <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/men2.avif" alt="">
+                    <a href="product.php?id=4" class="product-link">
+                        <img src="images/men2.avif" alt="">
+                    </a>
                     <h3>Discovery Bumbag PM</h3>
                     <p>₱129,000.00</p>
-                    <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/men3.avif" alt="">
+                    <a href="product.php?id=17" class="product-link">
+                        <img src="images/men3.avif" alt="">
+                    </a>
                     <h3>Avenue Slingbag PM</h3>
                     <p>₱137,000.00</p>
-                    <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/men4.avif" alt="">
+                    <a href="product.php?id=18" class="product-link">
+                        <img src="images/men4.avif" alt="">
+                    </a>
                     <h3>Keepall Bandoulière 35</h3>
                     <p>₱168,000.00</p>
-                    <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/men5.avif" alt="">
+                    <a href="product.php?id=19" class="product-link">
+                        <img src="images/men5.avif" alt="">
+                    </a>
                     <h3>Courrier Messenger</h3>
                     <p>₱182,000.00</p>
-                    <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/men6.avif" alt="">
+                    <a href="product.php?id=20" class="product-link">
+                        <img src="images/men6.avif" alt="">
+                    </a>
                     <h3>District PM</h3>
                     <p>₱129,000.00</p>
-                    <button>View Product</button>
                 </div>
 
             </div>
@@ -283,45 +289,51 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
             <div class="horizontal-products">
 
                 <div class="card">
-                    <img src="images/women1.avif" alt="">
+                    <a href="product.php?id=21" class="product-link">
+                        <img src="images/women1.avif" alt="">
+                    </a>
                     <h3>Speedy Bandoulière 20</h3>
                     <p>₱143,000.00</p>
-                    <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/women2.avif" alt="">
+                    <a href="product.php?id=22" class="product-link">
+                        <img src="images/women2.avif" alt="">
+                    </a>
                     <h3>Nano Madeleine</h3>
                     <p>₱175,000.00</p>
-                    <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/women3.avif" alt="">
+                    <a href="product.php?id=6" class="product-link">
+                        <img src="images/women3.avif" alt="">
+                    </a>
                     <h3>Wallet On Chain Ivy</h3>
                     <p>₱142,000.00</p>
-                    <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/women4.avif" alt="">
+                    <a href="product.php?id=24" class="product-link">
+                        <img src="images/women4.avif" alt="">
+                    </a>
                     <h3>Squire East West</h3>
                     <p>₱144,000.00  </p>
-                    <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/women5.avif" alt="">
+                    <a href="product.php?id=25" class="product-link">
+                        <img src="images/women5.avif" alt="">
+                    </a>
                     <h3>Vanity Chain Pouch</h3>
                     <p>₱190,000.00</p>
-                    <button>View Product</button>
                 </div>
 
                 <div class="card">
-                    <img src="images/women6.avif" alt="">
+                    <a href="product.php?id=26" class="product-link">
+                        <img src="images/women6.avif" alt="">
+                    </a>
                     <h3>Trunkie East West</h3>
                     <p>₱191,000.00</p>
-                    <button>View Product</button>
                 </div>
 
             </div>

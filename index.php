@@ -168,13 +168,13 @@
 
             <div class="card">
 
-                <img src="images/bag1.avif" alt="">
+                <a href="product.php?id=1" class="product-link">
+                    <img src="images/bag1.avif" alt="Nano Frivole">
+                </a>
 
                 <h3>Nano Frivole</h3>
 
                 <p>₱129,000.00</p>
-
-                <a href="product.php" class="view-btn">View Product</a>
 
             </div>
 
@@ -182,13 +182,13 @@
 
             <div class="card">
 
-                <img src="images/bag2.avif" alt="">
+                <a href="product.php?id=2" class="product-link">
+                    <img src="images/bag2.avif" alt="Avenue Slingbag PM">
+                </a>
 
                 <h3>Avenue Slingbag PM</h3>
 
                 <p>₱143,000.00</p>
-
-                <button>View Product</button>
 
             </div>
 
@@ -196,13 +196,13 @@
 
             <div class="card">
 
-                <img src="images/bag3.avif" alt="">
+                <a href="product.php?id=3" class="product-link">
+                    <img src="images/bag3.avif" alt="District PM">
+                </a>
 
                 <h3>District PM</h3>
 
                 <p>₱129,000.00</p>
-
-                <button>View Product</button>
 
             </div>
 
@@ -210,13 +210,13 @@
 
             <div class="card">
 
-                <img src="images/bag4.avif" alt="">
+                <a href="product.php?id=4" class="product-link">
+                    <img src="images/bag4.avif" alt="Discovery Bumbag PM">
+                </a>
 
                 <h3>Discovery Bumbag PM</h3>
 
                 <p>₱129,000.00</p>
-
-                <button>View Product</button>
 
             </div>
 
@@ -224,13 +224,13 @@
 
             <div class="card">
 
-                <img src="images/bag5.avif" alt="">
+                <a href="product.php?id=5" class="product-link">
+                    <img src="images/bag5.avif" alt="Nil">
+                </a>
 
                 <h3>Nil</h3>
 
                 <p>₱155,000.00</p>
-
-                <button>View Product</button>
 
             </div>
 
@@ -238,13 +238,13 @@
 
             <div class="card">
 
-                <img src="images/bag6.avif" alt="">
+                <a href="product.php?id=6" class="product-link">
+                    <img src="images/bag6.avif" alt="Wallet On Chain Ivy">
+                </a>
 
                 <h3>Wallet On Chain Ivy</h3>
 
                 <p>₱142,000.00</p>
-
-                <button>View Product</button>
 
             </div>
 
@@ -252,13 +252,13 @@
 
             <div class="card">
 
-                <img src="images/bag7.avif" alt="">
+                <a href="product.php?id=7" class="product-link">
+                    <img src="images/bag7.avif" alt="Multipass">
+                </a>
 
                 <h3>Multipass</h3>
 
                 <p>₱167,000.00</p>
-
-                <button>View Product</button>
 
             </div>
 
@@ -266,13 +266,13 @@
 
             <div class="card">
 
-                <img src="images/bag8.avif" alt="">
+                <a href="product.php?id=8" class="product-link">
+                    <img src="images/bag8.avif" alt="Alma BB">
+                </a>
 
                 <h3>Alma BB</h3>
 
                 <p>₱161,000.00</p>
-
-                <button>View Product</button>
 
             </div>
 
@@ -280,13 +280,13 @@
 
             <div class="card">
 
-                <img src="images/bag9.avif" alt="">
+                <a href="product.php?id=9" class="product-link">
+                    <img src="images/bag9.avif" alt="Neverfull MM">
+                </a>
 
                 <h3>Neverfull MM</h3>
 
                 <p>₱209,000.00</p>
-
-                <button>View Product</button>
 
             </div>
 
