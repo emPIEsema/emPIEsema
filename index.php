@@ -30,9 +30,9 @@
 
             <li><a href="#">Collections</a></li>
 
-            <li><a href="#">About Us</a></li>
+            <li><a href="about.php">About Us</a></li>
 
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" id="contactBtn">Contact</a></li>
 
         </ul>
 
@@ -147,8 +147,6 @@
             <li><a href="#">Women's Bags</a></li>
 
             <li><a href="#">Backpacks</a></li>
-
-            <li><a href="#">Wallet Bags</a></li>
 
         </ul>
 
@@ -372,41 +370,15 @@
 
     <div class="footer-links">
 
-        <h3>Quick Links</h3>
-
-        <a href="#">Home</a>
-
-        <a href="#">Shop</a>
-
-        <a href="#">Collections</a>
-
-        <a href="#">Contact</a>
-
-    </div>
-
-    <div class="footer-links">
-
         <h3>Categories</h3>
 
-        <a href="#">Travel Bags</a>
+        <a href="shop.php#travel">Travel Bags</a>
+        
+        <a href="shop.php#men">Men's Bags</a>
 
-        <a href="#">Luggage</a>
+        <a href="shop.php#women">Women's Bags</a>
 
-        <a href="#">Everyday Bags</a>
-
-        <a href="#">Accessories</a>
-
-    </div>
-
-    <div class="footer-links">
-
-        <h3>Follow Us</h3>
-
-        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-
-        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-
-        <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="shop.php#backpack">Backpacks</a>
 
     </div>
 
@@ -417,6 +389,66 @@
     © 2026 emPIEsema. All Rights Reserved.
 
 </div>
+
+<!-- CONTACT POPUP -->
+
+<div id="contactModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <h2>Contact emPIEsema</h2>
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            <strong>Email:</strong><br>
+            emPIEsema@gmail.com
+        </p>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            <strong>Phone:</strong><br>
+            09204050463
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+const modal = document.getElementById("contactModal");
+
+const btn = document.getElementById("contactBtn");
+
+const closeBtn = document.querySelector(".close");
+
+btn.onclick = function(e){
+
+    e.preventDefault();
+
+    modal.style.display = "flex";
+
+}
+
+closeBtn.onclick = function(){
+
+    modal.style.display = "none";
+
+}
+
+window.onclick = function(e){
+
+    if(e.target == modal){
+
+        modal.style.display = "none";
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>

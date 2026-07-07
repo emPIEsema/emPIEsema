@@ -180,45 +180,10 @@ $products = [
     "made" => "Made in France, Spain or Italy, or Made in the U.S. of imported materials."
 ],
 
-6 => [
-    "name" => "Wallet On Chain Ivy",
-    "price" => "₱142,000.00",
-    "image" => "images/bag6.avif",
-
-    "code" => "M29770",
-
-    "description" => "This fresh and feminine take on the classic Wallet On Chain Ivy presents the Monogram Empreinte signature with a stylish pastel gradient and link-inspired embossed motif. It is crafted from cowhide with an exclusive braided chain that can be removed if desired. Sized to fit the essentials, it opens to reveal a main compartment and has two pockets, one of which is zipped to store loose change.",
-
-    "dimensions" => "23.5 × 12 × 4.3 cm",
-
-    "left_specs" => [
-        "Monogram Empreinte Link Quartz",
-        "Cowhide leather",
-        "Cowhide-leather trim",
-        "Microfiber lining",
-        "Silver-toned hardware",
-        "Magnetic closure",
-        "Main compartment",
-        "Inside zipped pocket",
-        "Inside flat pocket"
-    ],
-
-    "right_specs" => [
-        "Fits: 6.7-inch smartphone, earphones, Romy Card Holder, sunglasses, keys, lipstick",
-        "Strap: REMOVABLE, ADJUSTABLE",
-        "Strap drop: 22.5 cm",
-        "Strap drop max: 44.0 cm",
-        "Chain: REMOVABLE",
-        "Chain drop: 18.5 cm"
-    ],
-
-    "made" => "Made in France, Spain or Italy, or Made in the U.S. of imported materials."
-],
-
 7 => [
     "name" => "Multipass",
     "price" => "₱167,000.00",
-    "image" => "images/bag8.avif",
+    "image" => "images/bag7.avif",
 
     "code" => "M27825",
 
@@ -251,7 +216,7 @@ $products = [
 8 => [
     "name" => "Alma BB",
     "price" => "₱161,000.00",
-    "image" => "images/bag7.avif",
+    "image" => "images/bag8.avif",
 
     "code" => "M2A378",
 
@@ -863,7 +828,215 @@ Available in Ocean Green and Black, this Carry-On is designed to travel beautifu
     "made" => "Made in France, Spain or Italy, or Made in the U.S. of imported materials."
 ],
 
+26 => [
+    "name" => "Nano Frivole",
+
+    "price" => "₱129,000.00",
+
+    "image" => "images/bag1.avif",
+
+    "code" => "M29537",
+
+    "status" => "New",
+
+    "description" => "The Nano Frivole draws inspiration from the classic Noé design but comes in a compact East-West silhouette that perfectly complements modern day-to-evening looks. Crafted from signature Monogram coated canvas with natural cowhide leather trim, it is designed to carry everyday essentials while offering timeless elegance and versatility.",
+
+    "dimensions" => "24 × 13 × 8 cm",
+
+    "left_specs" => [
+        "Monogram coated canvas",
+        "Natural cowhide-leather trim",
+        "Microfiber lining",
+        "Gold-toned hardware",
+        "Drawstring closure"
+    ],
+
+    "right_specs" => [
+        "Fits smartphone, wallet & keys",
+        "Adjustable & removable leather strap",
+        "Strap drop: 29.0 cm",
+        "Maximum strap drop: 50.0 cm",
+        "Interior flat pocket"
+    ],
+
+    "made" => "Made in France, Spain or Italy, or Made in the U.S. of imported materials."
+],
+
+27 => [
+    "name" => "Re-Nylon Backpack",
+
+    "price" => "₱138,000.00",
+
+    "image" => "images/backpack1.jpg",
+
+    "code" => "2VZ110_2C26_F0038_V_MMO",
+
+    "status" => "New",
+
+    "description" => "Minimalist, functional, and innovative, the Re-Nylon Backpack embodies modern luxury with a clean and timeless silhouette. Crafted from sustainable Re-Nylon with refined Saffiano leather details and metal buckles, it combines practicality, durability, and sophisticated style for everyday use.",
+
+    "dimensions" => "39 × 34 × 15 cm",
+
+    "left_specs" => [
+        "Product code: 2VZ110_2C26_F0038_V_MMO",
+        "Removable padded woven nylon tape handle",
+        "Flat leather handle",
+        "Adjustable woven nylon harness straps",
+        "Enameled metal triangle logo on the front"
+    ],
+
+    "right_specs" => [
+        "Flap, strap, buckle and magnetic closure",
+        "Two external pockets",
+        "Interior zipper pocket and patch pocket",
+        "Logo-print Re-Nylon lining",
+        "Imported"
+    ],
+
+    "made" => "Made in Italy."
+],
+
+28 => [
+    "name" => "Explore Bag",
+
+    "price" => "₱145,000.00",
+
+    "image" => "images/backpack2.jpg",
+
+    "code" => "2VZ118_2DW3_F0038_V_OOO",
+
+    "status" => "New",
+
+    "description" => "The Explore Bag is a perfect blend of sophistication and functionality, featuring a multi-pocket silhouette with soft lines. Designed for urban exploration and outdoor adventures, it combines innovative Re-Nylon construction with refined leather details, offering both versatility and timeless style.",
+
+    "dimensions" => "39 × 37 × 20 cm",
+
+    "left_specs" => [
+        "Product code: 2VZ118_2DW3_F0038_V_OOO",
+        "Padded nylon tape handle",
+        "Adjustable woven nylon shoulder straps",
+        "Enameled metal triangle logo on the flap",
+        "Drawstring closure with flap and side-release buckle"
+    ],
+
+    "right_specs" => [
+        "Three external zipper pockets",
+        "Back pocket with magnet",
+        "Interior zipper pocket and patch pocket",
+        "Re-Nylon lining",
+        "Imported"
+    ],
+
+    "made" => "Made in Italy."
+],
+
+29 => [
+    "name" => "Re-Nylon Backpack",
+
+    "price" => "₱152,000.00",
+
+    "image" => "images/backpack3.jpg",
+
+    "code" => "2VZ135_2DMG_F0038_V_HOL",
+
+    "status" => "New",
+
+    "description" => "The Re-Nylon Backpack is a modern interpretation of Prada's iconic backpack design, crafted from regenerated Re-Nylon made using recycled ocean plastics, fishing nets, and textile fibers. Finished with signature Saffiano leather details, an enameled metal triangle logo, and a spacious multi-pocket design, it offers a perfect balance of sustainability, functionality, and luxury.",
+
+    "dimensions" => "45 × 27 × 17 cm",
+
+    "left_specs" => [
+        "Product code: 2VZ135_2DMG_F0038_V_HOL",
+        "Leather handle",
+        "Adjustable woven nylon shoulder straps",
+        "Enameled metal triangle logo on flap",
+        "Push-lock clasp closure"
+    ],
+
+    "right_specs" => [
+        "Four external zipper pockets",
+        "Padded mesh fabric back",
+        "Interior zipper pocket and patch pocket",
+        "Re-Nylon lining",
+        "Imported"
+    ],
+
+    "made" => "Made in Italy."
+],
+
+30 => [
+    "name" => "Re-Nylon Backpack",
+
+    "price" => "₱148,000.00",
+
+    "image" => "images/backpack4.jpg",
+
+    "code" => "2VZ122_2DMG_F0002_V_OOO",
+
+    "status" => "New",
+
+    "description" => "This versatile and dynamic Re-Nylon backpack blends urban style with outdoor-inspired functionality. Designed with a lightweight and spacious silhouette, it features multiple utility pockets, leather trim, and refined technical details that create a contemporary, sporty look ideal for everyday use.",
+
+    "dimensions" => "42 × 29 × 14 cm",
+
+    "left_specs" => [
+        "Product code: 2VZ122_2DMG_F0002_V_OOO",
+        "Adjustable technical cord detail",
+        "Flat leather handle",
+        "Adjustable fabric harness straps",
+        "Enameled metal triangle logo on the front"
+    ],
+
+    "right_specs" => [
+        "Zipper closure",
+        "Three external zipper pockets",
+        "Bottle pocket with drawstring",
+        "Padded mesh fabric back",
+        "Interior zipper pocket and patch pocket",
+        "Re-Nylon lining",
+        "Imported"
+    ],
+
+    "made" => "Made in Italy."
+],
+
+31 => [
+    "name" => "Leather Satchel Backpack",
+
+    "price" => "₱165,000.00",
+
+    "image" => "images/backpack5.jpg",
+
+    "code" => "2VZ119_2HFQ_F0324_V_OOO",
+
+    "status" => "New",
+
+    "description" => "Classic lines and iconic Prada leather craftsmanship come together in this satchel-style backpack. Its sleek geometric silhouette combines practicality with contemporary elegance, while refined metal buckles, premium leather, and screen-printed branding create a sophisticated everyday accessory.",
+
+    "dimensions" => "38.5 × 32 × 12 cm",
+
+    "left_specs" => [
+        "Product code: 2VZ119_2HFQ_F0324_V_OOO",
+        "Leather handle",
+        "Adjustable leather harness straps",
+        "Hot-stamped logo on the flap",
+        "Flap and zipper closure"
+    ],
+
+    "right_specs" => [
+        "One external pocket with magnetic closure",
+        "Interior zipper pocket",
+        "Interior patch pockets",
+        "Logo-print Re-Nylon and nappa leather lining",
+        "Imported"
+    ],
+
+    "made" => "Made in Italy."
+],
+
 ];
+
+
 
 if (!isset($products[$id])) {
     $id = 1;

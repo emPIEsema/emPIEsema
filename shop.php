@@ -33,8 +33,8 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
         <ul>
             <li><a href="shop.php">Shop</a></li>
             <li><a href="#">Collections</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="about.php">About Us</a></li>
+            <li><a href="#" id="contactBtn">Contact</a></li>
         </ul>
     </nav>
 
@@ -82,13 +82,6 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
                 <a href="#backpack">
                     <i class="fa-solid fa-suitcase"></i>
                     <span>Backpacks</span>
-                </a>
-            </li>
-
-            <li data-target="wallet">
-                <a href="#wallet">
-                    <i class="fa-solid fa-wallet"></i>
-                    <span>Wallet Bags</span>
                 </a>
             </li>
 
@@ -358,185 +351,83 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'travel';
 
                 <div class="card">
 
-                    <img src="images/backpack1.avif" alt="Prada Explore Re-Nylon and leather backpack">
+                    <a href="product.php?id=25" class="product-link">
+                        <img src="images/backpack1.avif" alt="">
+                    </a>
 
                     <h3>Prada Explore Re-Nylon and leather backpack</h3>
 
                     <p>₱215,300.50</p>
 
-                    <button>View Product</button>
-
                 </div>
 
                 <!-- Product 2 -->
 
                 <div class="card">
 
-                    <img src="images/backpack2.avif" alt="Re-Nylon backpack">
+                    <a href="product.php?id=26" class="product-link">
+                        <img src="images/backpack2.avif" alt="">
+                    </a>
 
                     <h3>Re-Nylon backpack</h3>
 
                     <p>₱190,700.00</p>
 
-                    <button>View Product</button>
-
                 </div>
 
                 <!-- Product 3 -->
 
                 <div class="card">
 
-                    <img src="images/backpack3.avif" alt="Prada Explore leather backpack">
+                    <a href="product.php?id=29" class="product-link">
+                        <img src="images/backpack3.avif" alt="">
+                    </a>
 
                     <h3>Prada Explore leather backpack</h3>
 
                     <p>₱369,100.00</p>
 
-                    <button>View Product</button>
-
                 </div>
 
                 <!-- Product 4 -->
 
                 <div class="card">
 
-                    <img src="images/backpack4.avif" alt="Re-Nylon and Saffiano leather backpack">
+                    <a href="product.php?id=30" class="product-link">
+                        <img src="images/backpack4.avif" alt="">
+                    </a>
 
                     <h3>Re-Nylon and Saffiano leather backpack</h3>
 
                     <p>₱175,300.00</p>
 
-                    <button>View Product</button>
-
                 </div>
 
                 <!-- Product 5 -->
 
                 <div class="card">
 
-                    <img src="images/backpack5.avif" alt="Prada Speedrock Re-Nylon and leather backpack">
+                    <a href="product.php?id=31" class="product-link">
+                        <img src="images/backpack5.avif" alt="">
+                    </a>
 
                     <h3>Prada Speedrock Re-Nylon and leather backpack</h3>
 
                     <p>₱200,100.00</p>
 
-                    <button>View Product</button>
-
                 </div>
 
                 <!-- Product 6 -->
 
                 <div class="card">
 
-                    <img src="images/backpack6.avif" alt="Leather backpack">
+                    <a href="product.php?id=32" class="product-link">
+                        <img src="images/backpack6.avif" alt="">
+                    </a>
 
                     <h3>Leather backpack</h3>
 
                     <p>₱319,900.00</p>
-
-                    <button>View Product</button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- ================= WALLET BAGS ================= -->
-
-        <section id="wallet" class="category-section">
-
-            <div class="category-header">
-
-                <h2>Wallet Bags</h2>
-
-                <a href="#">View All →</a>
-
-            </div>
-
-            <div class="horizontal-products">
-
-                <!-- Product 1 -->
-
-                <div class="card">
-
-                    <img src="images/wallet1.jpg" alt="Leather Wallet">
-
-                    <h3>Leather Wallet</h3>
-
-                    <p>₱1,299</p>
-
-                    <button>View Product</button>
-
-                </div>
-
-                <!-- Product 2 -->
-
-                <div class="card">
-
-                    <img src="images/wallet2.jpg" alt="Zip Wallet">
-
-                    <h3>Zip Wallet</h3>
-
-                    <p>₱999</p>
-
-                    <button>View Product</button>
-
-                </div>
-
-                <!-- Product 3 -->
-
-                <div class="card">
-
-                    <img src="images/wallet3.jpg" alt="Mini Wallet Bag">
-
-                    <h3>Mini Wallet Bag</h3>
-
-                    <p>₱1,499</p>
-
-                    <button>View Product</button>
-
-                </div>
-
-                <!-- Product 4 -->
-
-                <div class="card">
-
-                    <img src="images/wallet4.jpg" alt="Card Holder">
-
-                    <h3>Card Holder</h3>
-
-                    <p>₱799</p>
-
-                    <button>View Product</button>
-
-                </div>
-
-                <!-- Product 5 -->
-
-                <div class="card">
-
-                    <img src="images/wallet5.jpg" alt="Long Wallet">
-
-                    <h3>Long Wallet</h3>
-
-                    <p>₱1,699</p>
-
-                    <button>View Product</button>
-
-                </div>
-
-                <!-- Product 6 -->
-
-                <div class="card">
-
-                    <img src="images/wallet6.jpg" alt="Travel Wallet">
-
-                    <h3>Travel Wallet</h3>
-
-                    <p>₱1,899</p>
-
-                    <button>View Product</button>
 
                 </div>
 
@@ -577,5 +468,65 @@ function updateActiveCategory() {
 window.addEventListener("scroll", updateActiveCategory);
 window.addEventListener("load", updateActiveCategory);
 </script>
+<!-- CONTACT POPUP -->
+
+<div id="contactModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <h2>Contact emPIEsema</h2>
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            <strong>Email:</strong><br>
+            emPIEsema@gmail.com
+        </p>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            <strong>Phone:</strong><br>
+            09204050463
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+const modal = document.getElementById("contactModal");
+
+const btn = document.getElementById("contactBtn");
+
+const closeBtn = document.querySelector(".close");
+
+btn.onclick = function(e){
+
+    e.preventDefault();
+
+    modal.style.display = "flex";
+
+}
+
+closeBtn.onclick = function(){
+
+    modal.style.display = "none";
+
+}
+
+window.onclick = function(e){
+
+    if(e.target == modal){
+
+        modal.style.display = "none";
+
+    }
+
+}
+
+</script>
+
 </body>
 </html>
