@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . '/includes/functions.php';
+$featuredProducts = getFeaturedProducts($pdo);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>emPIEsema | Every Journey. Every Bag. Every You.</title>
 
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=11">
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -14,43 +18,7 @@
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
-<header>
-
-    <div class="logo">
-        <img src="images/logo.png" alt="emPIEsema">
-    </div>
-
-    <nav>
-
-        <ul>
-
-            <li><a href="shop.php">Shop</a></li>
-
-            <li><a href="#">Collections</a></li>
-
-            <li><a href="#">About Us</a></li>
-
-            <li><a href="#">Contact</a></li>
-
-        </ul>
-
-    </nav>
-
-    <div class="nav-icons">
-
-        <i class="fa-solid fa-user"></i>
-
-        <i class="fa-solid fa-heart"></i>
-
-        <i class="fa-solid fa-cart-shopping"></i>
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-    </div>
-
-</header>
+<?php include __DIR__ . '/includes/header.php'; ?>
 
 <!-- ================= HERO ================= -->
 
@@ -140,15 +108,13 @@
 
         <ul class="category-list">
 
-            <li><a href="#">Travel Bags</a></li>
+            <li><a href="shop.php#travel">Travel Bags</a></li>
 
-            <li><a href="#">Men's Bags</a></li>
+            <li><a href="shop.php#men">Men's Bags</a></li>
 
-            <li><a href="#">Women's Bags</a></li>
+            <li><a href="shop.php#women">Women's Bags</a></li>
 
-            <li><a href="#">Backpacks</a></li>
-
-            <li><a href="#">Wallet Bags</a></li>
+            <li><a href="shop.php#backpack">Backpacks</a></li>
 
         </ul>
 
@@ -164,131 +130,21 @@
 
         <div class="product-grid">
 
-            <!-- Product 1 -->
+            <?php foreach ($featuredProducts as $p): ?>
 
             <div class="card">
 
-                <a href="product.php?id=1" class="product-link">
-                    <img src="images/bag1.avif" alt="Nano Frivole">
+                <a href="product.php?id=<?php echo (int)$p['id']; ?>" class="product-link">
+                    <img src="<?php echo htmlspecialchars($p['image']); ?>" alt="<?php echo htmlspecialchars($p['name']); ?>">
                 </a>
 
-                <h3>Nano Frivole</h3>
+                <h3><?php echo htmlspecialchars($p['name']); ?></h3>
 
-                <p>₱129,000.00</p>
+                <p>₱<?php echo number_format((float)$p['price'], 2); ?></p>
 
             </div>
 
-            <!-- Product 2 -->
-
-            <div class="card">
-
-                <a href="product.php?id=2" class="product-link">
-                    <img src="images/bag2.avif" alt="Avenue Slingbag PM">
-                </a>
-
-                <h3>Avenue Slingbag PM</h3>
-
-                <p>₱143,000.00</p>
-
-            </div>
-
-            <!-- Product 3 -->
-
-            <div class="card">
-
-                <a href="product.php?id=3" class="product-link">
-                    <img src="images/bag3.avif" alt="District PM">
-                </a>
-
-                <h3>District PM</h3>
-
-                <p>₱129,000.00</p>
-
-            </div>
-
-            <!-- Product 4 -->
-
-            <div class="card">
-
-                <a href="product.php?id=4" class="product-link">
-                    <img src="images/bag4.avif" alt="Discovery Bumbag PM">
-                </a>
-
-                <h3>Discovery Bumbag PM</h3>
-
-                <p>₱129,000.00</p>
-
-            </div>
-
-            <!-- Product 5 -->
-
-            <div class="card">
-
-                <a href="product.php?id=5" class="product-link">
-                    <img src="images/bag5.avif" alt="Nil">
-                </a>
-
-                <h3>Nil</h3>
-
-                <p>₱155,000.00</p>
-
-            </div>
-
-            <!-- Product 6 -->
-
-            <div class="card">
-
-                <a href="product.php?id=6" class="product-link">
-                    <img src="images/bag6.avif" alt="Wallet On Chain Ivy">
-                </a>
-
-                <h3>Wallet On Chain Ivy</h3>
-
-                <p>₱142,000.00</p>
-
-            </div>
-
-            <!-- Product 7 -->
-
-            <div class="card">
-
-                <a href="product.php?id=7" class="product-link">
-                    <img src="images/bag7.avif" alt="Multipass">
-                </a>
-
-                <h3>Multipass</h3>
-
-                <p>₱167,000.00</p>
-
-            </div>
-
-            <!-- Product 8 -->
-
-            <div class="card">
-
-                <a href="product.php?id=8" class="product-link">
-                    <img src="images/bag8.avif" alt="Alma BB">
-                </a>
-
-                <h3>Alma BB</h3>
-
-                <p>₱161,000.00</p>
-
-            </div>
-
-            <!-- Product 9 -->
-
-            <div class="card">
-
-                <a href="product.php?id=9" class="product-link">
-                    <img src="images/bag9.avif" alt="Neverfull MM">
-                </a>
-
-                <h3>Neverfull MM</h3>
-
-                <p>₱209,000.00</p>
-
-            </div>
+            <?php endforeach; ?>
 
         </div>
 
@@ -372,41 +228,15 @@
 
     <div class="footer-links">
 
-        <h3>Quick Links</h3>
-
-        <a href="#">Home</a>
-
-        <a href="#">Shop</a>
-
-        <a href="#">Collections</a>
-
-        <a href="#">Contact</a>
-
-    </div>
-
-    <div class="footer-links">
-
         <h3>Categories</h3>
 
-        <a href="#">Travel Bags</a>
+        <a href="shop.php#travel">Travel Bags</a>
+        
+        <a href="shop.php#men">Men's Bags</a>
 
-        <a href="#">Luggage</a>
+        <a href="shop.php#women">Women's Bags</a>
 
-        <a href="#">Everyday Bags</a>
-
-        <a href="#">Accessories</a>
-
-    </div>
-
-    <div class="footer-links">
-
-        <h3>Follow Us</h3>
-
-        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-
-        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-
-        <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="shop.php#backpack">Backpacks</a>
 
     </div>
 
@@ -416,7 +246,69 @@
 
     © 2026 emPIEsema. All Rights Reserved.
 
+    <p class="disclaimer">Disclaimer: This website was created for educational purposes only and is a requirement for our final project.</p>
+
 </div>
+
+<!-- CONTACT POPUP -->
+
+<div id="contactModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <h2>Contact emPIEsema</h2>
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            <strong>Email:</strong><br>
+            emPIEsema@gmail.com
+        </p>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            <strong>Phone:</strong><br>
+            09204050463
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+const modal = document.getElementById("contactModal");
+
+const btn = document.getElementById("contactBtn");
+
+const closeBtn = document.querySelector(".close");
+
+btn.onclick = function(e){
+
+    e.preventDefault();
+
+    modal.style.display = "flex";
+
+}
+
+closeBtn.onclick = function(){
+
+    modal.style.display = "none";
+
+}
+
+window.onclick = function(e){
+
+    if(e.target == modal){
+
+        modal.style.display = "none";
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
