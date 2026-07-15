@@ -27,7 +27,11 @@ if (!$order) {
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="admin.css?v=6">
+=======
+    <link rel="stylesheet" href="admin.css?v=5">
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
 </head>
 <body>
 

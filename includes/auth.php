@@ -6,37 +6,56 @@ if (session_status() === PHP_SESSION_NONE) {
 
 require_once __DIR__ . '/db.php';
 
+<<<<<<< HEAD
 // isLoggedIn
+=======
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
 function isLoggedIn(): bool
 {
     return isset($_SESSION['account_id']);
 }
 
+<<<<<<< HEAD
 // isAdmin
+=======
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
 function isAdmin(): bool
 {
     return isLoggedIn() && ($_SESSION['role'] ?? '') === 'admin';
 }
 
+<<<<<<< HEAD
 // currentUsername
+=======
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
 function currentUsername(): ?string
 {
     return $_SESSION['username'] ?? null;
 }
 
+<<<<<<< HEAD
 // attemptLogin
 function attemptLogin(PDO $pdo, string $username, string $password): string
 {
     $stmt = $pdo->prepare('SELECT id, username, password_hash, role, email_verified FROM accounts WHERE username = ?');
+=======
+function attemptLogin(PDO $pdo, string $username, string $password): bool
+{
+    $stmt = $pdo->prepare('SELECT id, username, password_hash, role FROM accounts WHERE username = ?');
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
     $stmt->execute([$username]);
     $account = $stmt->fetch();
 
     if (!$account || !password_verify($password, $account['password_hash'])) {
+<<<<<<< HEAD
         return 'invalid';
     }
 
     if (!$account['email_verified']) {
         return 'unverified';
+=======
+        return false;
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
     }
 
     session_regenerate_id(true);
@@ -44,10 +63,16 @@ function attemptLogin(PDO $pdo, string $username, string $password): string
     $_SESSION['username'] = $account['username'];
     $_SESSION['role'] = $account['role'];
 
+<<<<<<< HEAD
     return 'ok';
 }
 
 // usernameExists
+=======
+    return true;
+}
+
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
 function usernameExists(PDO $pdo, string $username): bool
 {
     $stmt = $pdo->prepare('SELECT id FROM accounts WHERE username = ?');
@@ -55,6 +80,7 @@ function usernameExists(PDO $pdo, string $username): bool
     return (bool)$stmt->fetch();
 }
 
+<<<<<<< HEAD
 // createAccount
 function createAccount(PDO $pdo, string $username, string $password, string $role = 'customer', string $firstName = '', string $lastName = '', string $email = ''): array
 {
@@ -84,13 +110,33 @@ function verifyAccount(PDO $pdo, string $token): bool
 }
 
 // logout
+=======
+function createAccount(PDO $pdo, string $username, string $password, string $role = 'customer'): int
+{
+    $stmt = $pdo->prepare('INSERT INTO accounts (username, password_hash, role) VALUES (?, ?, ?)');
+    $stmt->execute([$username, password_hash($password, PASSWORD_DEFAULT), $role]);
+
+    $id = (int)$pdo->lastInsertId();
+
+    session_regenerate_id(true);
+    $_SESSION['account_id'] = $id;
+    $_SESSION['username'] = $username;
+    $_SESSION['role'] = $role;
+
+    return $id;
+}
+
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
 function logout(): void
 {
     $_SESSION = [];
     session_destroy();
 }
 
+<<<<<<< HEAD
 // requireLogin
+=======
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
 function requireLogin(string $redirectTo = null): void
 {
     if (!isLoggedIn()) {
@@ -100,7 +146,10 @@ function requireLogin(string $redirectTo = null): void
     }
 }
 
+<<<<<<< HEAD
 // requireAdmin
+=======
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
 function requireAdmin(): void
 {
     if (!isLoggedIn()) {

@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS accounts (
     username VARCHAR(100) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
     role VARCHAR(20) NOT NULL DEFAULT 'customer',
+<<<<<<< HEAD
     first_name VARCHAR(100) NOT NULL DEFAULT '',
     last_name VARCHAR(100) NOT NULL DEFAULT '',
     email VARCHAR(150) NOT NULL DEFAULT '',
@@ -72,6 +73,11 @@ CREATE TABLE IF NOT EXISTS mail_settings (
 
 INSERT IGNORE INTO mail_settings (id) VALUES (1);
 
+=======
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
 CREATE TABLE IF NOT EXISTS cart_items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     account_id INT NOT NULL,
