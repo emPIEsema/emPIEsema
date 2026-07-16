@@ -53,7 +53,7 @@ $brandCredit = $brandCredits[$product['category'] ?? ''] ?? $brandCredits['men']
 
     <title><?php echo htmlspecialchars($product['name']); ?> | emPIEsema</title>
 
-    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="style.css?v=17">
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -158,6 +158,8 @@ $brandCredit = $brandCredits[$product['category'] ?? ''] ?? $brandCredits['men']
 <div class="product-credit">
     Product courtesy of <a href="<?php echo htmlspecialchars($brandCredit['url']); ?>" target="_blank" rel="noopener noreferrer"><?php echo htmlspecialchars($brandCredit['name']); ?></a>. All product names, images, and trademarks belong to their respective owners.
 </div>
+
+<?php include __DIR__ . '/includes/site-footer.php'; ?>
 
 </body>
 </html>
