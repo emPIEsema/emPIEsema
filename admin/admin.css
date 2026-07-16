@@ -330,16 +330,8 @@ a {
 
 .field input[type="text"],
 .field input[type="number"],
-<<<<<<< HEAD
 .field input[type="email"],
 .field input[type="password"],
-=======
-<<<<<<< HEAD
-.field input[type="email"],
-.field input[type="password"],
-=======
->>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
->>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
 .field select,
 .field textarea {
     width: 100%;
