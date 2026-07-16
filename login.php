@@ -2,14 +2,14 @@
 require_once __DIR__ . '/includes/auth.php';
 
 $explicitRedirect = isset($_GET['redirect']) || isset($_POST['redirect']);
-$redirect = $_GET['redirect'] ?? $_POST['redirect'] ?? '/emPIEsema/index.php';
+$redirect = $_GET['redirect'] ?? $_POST['redirect'] ?? '/index.php';
 $error = '';
 
 function loginDestination(string $redirect, bool $explicitRedirect): string
 {
     // Admins land in the admin panel unless they were bounced here from a specific page.
     if (!$explicitRedirect && isAdmin()) {
-        return '/emPIEsema/admin/index.php';
+        return '/admin/index.php';
     }
     return $redirect;
 }
@@ -96,15 +96,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <button type="submit" class="auth-submit">Login</button>
 
-            <p class="auth-switch">Don't have an account? <a href="/emPIEsema/signup.php?redirect=<?php echo urlencode($redirect); ?>">Sign up</a></p>
+            <p class="auth-switch">Don't have an account? <a href="/signup.php?redirect=<?php echo urlencode($redirect); ?>">Sign up</a></p>
 
-            <a href="/emPIEsema/index.php" class="auth-back">← Back to shop</a>
+            <a href="/index.php" class="auth-back">← Back to shop</a>
 
         </form>
 
     </div>
 
 </div>
+
+<p class="disclaimer" style="text-align:center; padding:12px;">Disclaimer: This website was created for educational purposes only and is a requirement for our final project.</p>
 
 </body>
 </html>

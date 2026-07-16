@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/cart.php';
 
-requireLogin('/emPIEsema/cart.php');
+requireLogin('/cart.php');
 
 $accountId = (int)$_SESSION['account_id'];
 
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         updateCartQty($pdo, $accountId, $productId, (int)($_POST['quantity'] ?? 1));
     }
 
-    header('Location: /emPIEsema/cart.php');
+    header('Location: /cart.php');
     exit;
 }
 
@@ -47,7 +47,7 @@ foreach ($items as $item) {
 
     <?php if (empty($items)): ?>
 
-        <p class="cart-empty">Your cart is empty. <a href="/emPIEsema/shop.php">Continue shopping →</a></p>
+        <p class="cart-empty">Your cart is empty. <a href="/shop.php">Continue shopping →</a></p>
 
     <?php else: ?>
 
@@ -56,7 +56,7 @@ foreach ($items as $item) {
             <?php foreach ($items as $item): ?>
             <div class="cart-row">
 
-                <img src="/emPIEsema/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['name']); ?>">
+                <img src="/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['name']); ?>">
 
                 <div class="cart-info">
                     <h3><?php echo htmlspecialchars($item['name']); ?></h3>
@@ -88,13 +88,15 @@ foreach ($items as $item) {
         </div>
 
         <div class="cart-actions">
-            <a href="/emPIEsema/shop.php" class="btn btn-outline">Continue Shopping</a>
-            <a href="/emPIEsema/checkout.php" class="btn">Proceed to Checkout</a>
+            <a href="/shop.php" class="btn btn-outline">Continue Shopping</a>
+            <a href="/checkout.php" class="btn">Proceed to Checkout</a>
         </div>
 
     <?php endif; ?>
 
 </section>
+
+<p class="disclaimer" style="text-align:center; padding:12px;">Disclaimer: This website was created for educational purposes only and is a requirement for our final project.</p>
 
 </body>
 </html>

@@ -32,7 +32,7 @@ $results = $q !== '' ? searchProducts($pdo, $q) : [];
     </div>
 
     <?php if ($q !== '' && empty($results)): ?>
-        <p class="cart-empty">No products matched your search. <a href="/emPIEsema/shop.php">Browse the shop →</a></p>
+        <p class="cart-empty">No products matched your search. <a href="/shop.php">Browse the shop →</a></p>
     <?php endif; ?>
 
     <div class="product-grid collection-grid">
@@ -50,6 +50,8 @@ $results = $q !== '' ? searchProducts($pdo, $q) : [];
     </div>
 
 </section>
+
+<p class="disclaimer" style="text-align:center; padding:12px;">Disclaimer: This website was created for educational purposes only and is a requirement for our final project.</p>
 
 </body>
 </html>

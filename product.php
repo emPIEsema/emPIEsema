@@ -17,7 +17,7 @@ $cartMessage = '';
 
 if (isset($_POST['add_to_cart'])) {
 
-    requireLogin('/emPIEsema/product.php?id=' . $id);
+    requireLogin('/product.php?id=' . $id);
 
     $result = addToCart($pdo, (int)$_SESSION['account_id'], $id, 1);
 
@@ -158,6 +158,8 @@ $brandCredit = $brandCredits[$product['category'] ?? ''] ?? $brandCredits['men']
 <div class="product-credit">
     Product courtesy of <a href="<?php echo htmlspecialchars($brandCredit['url']); ?>" target="_blank" rel="noopener noreferrer"><?php echo htmlspecialchars($brandCredit['name']); ?></a>. All product names, images, and trademarks belong to their respective owners.
 </div>
+
+<p class="disclaimer" style="text-align:center; padding:12px;">Disclaimer: This website was created for educational purposes only and is a requirement for our final project.</p>
 
 </body>
 </html>

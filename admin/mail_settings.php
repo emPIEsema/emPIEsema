@@ -114,5 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </div>
 
+<p class="disclaimer" style="text-align:center; padding:12px;">Disclaimer: This website was created for educational purposes only and is a requirement for our final project.</p>
+
 </body>
 </html>

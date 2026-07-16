@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/orders.php';
 
-requireLogin('/emPIEsema/checkout.php');
+requireLogin('/checkout.php');
 
 $accountId = (int)$_SESSION['account_id'];
 $items = getCartItems($pdo, $accountId);
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $orderId = createOrder($pdo, $accountId, $form);
 
         if ($orderId) {
-            header('Location: /emPIEsema/order_success.php?id=' . $orderId);
+            header('Location: /order_success.php?id=' . $orderId);
             exit;
         }
 
@@ -76,7 +76,7 @@ $total = $subtotal + $shippingFee;
 
     <section class="cart-page">
         <h1>Checkout</h1>
-        <p class="cart-empty">Your cart is empty. <a href="/emPIEsema/shop.php">Continue shopping →</a></p>
+        <p class="cart-empty">Your cart is empty. <a href="/shop.php">Continue shopping →</a></p>
     </section>
 
 <?php else: ?>
@@ -104,7 +104,7 @@ $total = $subtotal + $shippingFee;
                 <tr>
                     <td>
                         <div class="checkout-product">
-                            <img src="/emPIEsema/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['name']); ?>">
+                            <img src="/<?php echo htmlspecialchars($item['image']); ?>" alt="<?php echo htmlspecialchars($item['name']); ?>">
                             <div>
                                 <strong><?php echo htmlspecialchars($item['name']); ?></strong>
                                 <span>₱<?php echo number_format((float)$item['price'], 2); ?> each</span>
@@ -133,7 +133,7 @@ $total = $subtotal + $shippingFee;
             </div>
         </div>
 
-        <a href="/emPIEsema/cart.php" class="checkout-back"><i class="fa-solid fa-arrow-left"></i> Continue Shopping</a>
+        <a href="/cart.php" class="checkout-back"><i class="fa-solid fa-arrow-left"></i> Continue Shopping</a>
 
     </div>
 
@@ -191,6 +191,8 @@ $total = $subtotal + $shippingFee;
 </section>
 
 <?php endif; ?>
+
+<p class="disclaimer" style="text-align:center; padding:12px;">Disclaimer: This website was created for educational purposes only and is a requirement for our final project.</p>
 
 </body>
 </html>

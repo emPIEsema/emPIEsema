@@ -36,20 +36,22 @@ $success = $token !== '' && verifyAccount($pdo, $token);
             <?php if ($success): ?>
                 <h1 class="welcome-heading">Email Verified</h1>
                 <p class="auth-sub">Your account is now active. You can log in.</p>
-                <a href="/emPIEsema/login.php" class="auth-submit" style="display:block; text-align:center; margin-top:8px; text-decoration:none;">Go to Login</a>
+                <a href="/login.php" class="auth-submit" style="display:block; text-align:center; margin-top:8px; text-decoration:none;">Go to Login</a>
             <?php else: ?>
                 <h1 class="welcome-heading">Verification Failed</h1>
                 <p class="auth-sub">This verification link is invalid or has already been used.</p>
-                <a href="/emPIEsema/signup.php" class="auth-submit" style="display:block; text-align:center; margin-top:8px; text-decoration:none;">Back to Sign Up</a>
+                <a href="/signup.php" class="auth-submit" style="display:block; text-align:center; margin-top:8px; text-decoration:none;">Back to Sign Up</a>
             <?php endif; ?>
 
-            <a href="/emPIEsema/index.php" class="auth-back">← Back to shop</a>
+            <a href="/index.php" class="auth-back">← Back to shop</a>
 
         </div>
 
     </div>
 
 </div>
+
+<p class="disclaimer" style="text-align:center; padding:12px;">Disclaimer: This website was created for educational purposes only and is a requirement for our final project.</p>
 
 </body>
 </html>
