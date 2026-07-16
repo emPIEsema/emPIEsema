@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/includes/auth.php';
-<<<<<<< HEAD
 require_once __DIR__ . '/includes/mailer.php';
 
 $redirect = $_GET['redirect'] ?? $_POST['redirect'] ?? '/emPIEsema/index.php';
@@ -10,12 +9,6 @@ $username = '';
 $firstName = '';
 $lastName = '';
 $email = '';
-=======
-
-$redirect = $_GET['redirect'] ?? $_POST['redirect'] ?? '/emPIEsema/index.php';
-$error = '';
-$username = '';
->>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
 
 if (isLoggedIn()) {
     header('Location: ' . $redirect);
@@ -24,7 +17,6 @@ if (isLoggedIn()) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username'] ?? '');
-<<<<<<< HEAD
     $firstName = trim($_POST['first_name'] ?? '');
     $lastName = trim($_POST['last_name'] ?? '');
     $email = trim($_POST['email'] ?? '');
@@ -39,15 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'First and last name must not contain numbers or symbols.';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = 'Please enter a valid email address.';
-=======
-    $password = $_POST['password'] ?? '';
-    $confirm = $_POST['confirm_password'] ?? '';
-
-    if ($username === '' || $password === '' || $confirm === '') {
-        $error = 'Please fill in all fields.';
-    } elseif (strlen($username) < 3) {
-        $error = 'Username must be at least 3 characters.';
->>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
     } elseif (strlen($password) < 6) {
         $error = 'Password must be at least 6 characters.';
     } elseif ($password !== $confirm) {
@@ -55,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (usernameExists($pdo, $username)) {
         $error = 'That username is already taken.';
     } else {
-<<<<<<< HEAD
         $account = createAccount($pdo, $username, $password, 'customer', $firstName, $lastName, $email);
 
         $verifyUrl = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']
@@ -66,11 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $error = 'Account created, but we could not send the verification email. Please contact support.';
         }
-=======
-        createAccount($pdo, $username, $password, 'customer');
-        header('Location: ' . $redirect);
-        exit;
->>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
     }
 }
 ?>
@@ -101,7 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
 
-<<<<<<< HEAD
         <?php if ($success): ?>
         <div class="auth-card">
 
@@ -114,8 +90,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         </div>
         <?php else: ?>
-=======
->>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
         <form class="auth-card" method="POST">
 
             <h1 class="welcome-heading">Join Us</h1>
@@ -128,7 +102,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="hidden" name="redirect" value="<?php echo htmlspecialchars($redirect); ?>">
 
             <div class="field-float">
-<<<<<<< HEAD
                 <label>First Name</label>
                 <div class="input-icon">
                     <i class="fa-regular fa-user"></i>
@@ -157,12 +130,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="input-icon">
                     <i class="fa-regular fa-envelope"></i>
                     <input type="text" name="username" placeholder="Choose a username" value="<?php echo htmlspecialchars($username); ?>" required minlength="3">
-=======
-                <label>Username</label>
-                <div class="input-icon">
-                    <i class="fa-regular fa-envelope"></i>
-                    <input type="text" name="username" placeholder="Choose a username" value="<?php echo htmlspecialchars($username); ?>" required autofocus minlength="3">
->>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
                 </div>
             </div>
 
@@ -189,10 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="/emPIEsema/index.php" class="auth-back">← Back to shop</a>
 
         </form>
-<<<<<<< HEAD
         <?php endif; ?>
-=======
->>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
 
     </div>
 

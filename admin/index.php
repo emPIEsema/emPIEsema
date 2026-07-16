@@ -15,11 +15,7 @@ $products = getAllProducts($pdo);
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="admin.css?v=6">
-=======
-    <link rel="stylesheet" href="admin.css?v=5">
->>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
 </head>
 <body>
 
@@ -43,10 +39,7 @@ $products = getAllProducts($pdo);
             <p class="sub"><?php echo count($products); ?> products in catalog</p>
         </div>
         <div style="display:flex; gap:12px;">
-<<<<<<< HEAD
             <a href="mail_settings.php" class="btn-secondary"><i class="fa-solid fa-envelope"></i> Mail Settings</a>
-=======
->>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
             <a href="orders.php" class="btn-secondary"><i class="fa-solid fa-receipt"></i> Orders</a>
             <a href="product_form.php" class="btn-primary"><i class="fa-solid fa-plus"></i> Add Product</a>
         </div>
