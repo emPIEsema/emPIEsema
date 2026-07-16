@@ -14,7 +14,7 @@ $orders = getAllOrders($pdo);
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="admin.css?v=7">
+    <link rel="stylesheet" href="admin.css?v=6">
 </head>
 <body>
 
@@ -90,7 +90,7 @@ $orders = getAllOrders($pdo);
 
 </div>
 
-<?php include __DIR__ . '/../includes/admin-footer.php'; ?>
+<p class="disclaimer" style="text-align:center; padding:12px;">Disclaimer: This website was created for educational purposes only and is a requirement for our final project.</p>
 
 </body>
 </html>

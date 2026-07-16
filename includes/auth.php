@@ -95,7 +95,7 @@ function requireLogin(string $redirectTo = null): void
 {
     if (!isLoggedIn()) {
         $target = $redirectTo ?? ($_SERVER['REQUEST_URI'] ?? '');
-        header('Location: ' . BASE_URL . '/login.php?redirect=' . urlencode($target));
+        header('Location: /login.php?redirect=' . urlencode($target));
         exit;
     }
 }
@@ -104,7 +104,7 @@ function requireLogin(string $redirectTo = null): void
 function requireAdmin(): void
 {
     if (!isLoggedIn()) {
-        header('Location: ' . BASE_URL . '/login.php?redirect=' . urlencode($_SERVER['REQUEST_URI'] ?? ''));
+        header('Location: /login.php?redirect=' . urlencode($_SERVER['REQUEST_URI'] ?? ''));
         exit;
     }
     if (!isAdmin()) {
