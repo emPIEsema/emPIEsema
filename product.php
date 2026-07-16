@@ -17,7 +17,7 @@ $cartMessage = '';
 
 if (isset($_POST['add_to_cart'])) {
 
-    requireLogin('/emPIEsema/product.php?id=' . $id);
+    requireLogin('/product.php?id=' . $id);
 
     $result = addToCart($pdo, (int)$_SESSION['account_id'], $id, 1);
 
@@ -53,7 +53,7 @@ $brandCredit = $brandCredits[$product['category'] ?? ''] ?? $brandCredits['men']
 
     <title><?php echo htmlspecialchars($product['name']); ?> | emPIEsema</title>
 
-    <link rel="stylesheet" href="style.css?v=17">
+    <link rel="stylesheet" href="style.css?v=16">
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -159,7 +159,7 @@ $brandCredit = $brandCredits[$product['category'] ?? ''] ?? $brandCredits['men']
     Product courtesy of <a href="<?php echo htmlspecialchars($brandCredit['url']); ?>" target="_blank" rel="noopener noreferrer"><?php echo htmlspecialchars($brandCredit['name']); ?></a>. All product names, images, and trademarks belong to their respective owners.
 </div>
 
-<?php include __DIR__ . '/includes/site-footer.php'; ?>
+<p class="disclaimer" style="text-align:center; padding:12px;">Disclaimer: This website was created for educational purposes only and is a requirement for our final project.</p>
 
 </body>
 </html>

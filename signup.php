@@ -2,7 +2,7 @@
 require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/mailer.php';
 
-$redirect = $_GET['redirect'] ?? $_POST['redirect'] ?? '/emPIEsema/index.php';
+$redirect = $_GET['redirect'] ?? $_POST['redirect'] ?? '/index.php';
 $error = '';
 $success = false;
 $username = '';
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $account = createAccount($pdo, $username, $password, 'customer', $firstName, $lastName, $email);
 
         $verifyUrl = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']
-            . '/emPIEsema/verify.php?token=' . urlencode($account['token']);
+            . '/verify.php?token=' . urlencode($account['token']);
 
         if (sendVerificationEmail($pdo, $email, $firstName, $verifyUrl)) {
             $success = true;
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | emPIEsema</title>
 
-    <link rel="stylesheet" href="style.css?v=17">
+    <link rel="stylesheet" href="style.css?v=16">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -84,9 +84,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h1 class="welcome-heading">Check Your Email</h1>
             <p class="auth-sub">We sent a verification link to <strong><?php echo htmlspecialchars($email); ?></strong>. Click it to activate your account before logging in.</p>
 
-            <a href="/emPIEsema/login.php?redirect=<?php echo urlencode($redirect); ?>" class="auth-submit" style="display:block; text-align:center; margin-top:8px; text-decoration:none;">Go to Login</a>
+            <a href="/login.php?redirect=<?php echo urlencode($redirect); ?>" class="auth-submit" style="display:block; text-align:center; margin-top:8px; text-decoration:none;">Go to Login</a>
 
-            <a href="/emPIEsema/index.php" class="auth-back">← Back to shop</a>
+            <a href="/index.php" class="auth-back">← Back to shop</a>
 
         </div>
         <?php else: ?>
@@ -151,9 +151,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <button type="submit" class="auth-submit" style="margin-top:8px;">Create Account</button>
 
-            <p class="auth-switch">Already have an account? <a href="/emPIEsema/login.php?redirect=<?php echo urlencode($redirect); ?>">Sign in</a></p>
+            <p class="auth-switch">Already have an account? <a href="/login.php?redirect=<?php echo urlencode($redirect); ?>">Sign in</a></p>
 
-            <a href="/emPIEsema/index.php" class="auth-back">← Back to shop</a>
+            <a href="/index.php" class="auth-back">← Back to shop</a>
 
         </form>
         <?php endif; ?>
@@ -162,7 +162,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </div>
 
-<?php include __DIR__ . '/includes/site-footer.php'; ?>
+<p class="disclaimer" style="text-align:center; padding:12px;">Disclaimer: This website was created for educational purposes only and is a requirement for our final project.</p>
 
 </body>
 </html>
