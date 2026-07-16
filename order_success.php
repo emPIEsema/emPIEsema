@@ -1,13 +1,13 @@
 <?php
 require_once __DIR__ . '/includes/orders.php';
 
-requireLogin('/emPIEsema/index.php');
+requireLogin(BASE_URL . '/index.php');
 
 $orderId = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 $order = getOrderById($pdo, $orderId, (int)$_SESSION['account_id']);
 
 if (!$order) {
-    header('Location: /emPIEsema/index.php');
+    header('Location: ' . BASE_URL . '/index.php');
     exit;
 }
 ?>
@@ -18,7 +18,7 @@ if (!$order) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Confirmed | emPIEsema</title>
 
-    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="style.css?v=17">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -59,11 +59,13 @@ if (!$order) {
 
         </div>
 
-        <a href="/emPIEsema/shop.php" class="btn">Continue Shopping</a>
+        <a href="<?php echo BASE_URL; ?>/shop.php" class="btn">Continue Shopping</a>
 
     </div>
 
 </section>
+
+<?php include __DIR__ . '/includes/site-footer.php'; ?>
 
 </body>
 </html>

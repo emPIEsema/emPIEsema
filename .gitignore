@@ -1,0 +1,2 @@
+# Contains live database credentials — never commit this.
+includes/db-config.php

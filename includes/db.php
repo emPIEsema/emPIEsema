@@ -1,9 +1,16 @@
 <?php
 
-$DB_HOST = 'localhost';
-$DB_NAME = 'empiesema';
-$DB_USER = 'root';
-$DB_PASS = '';
+require_once __DIR__ . '/db-config.php';
+
+// ── Site base URL ─────────────────────────────────────────────────
+// Auto-detects whether the site lives at the domain root (live host)
+// or in a subfolder (e.g. XAMPP's /emPIEsema/), so links work in both
+// places without editing anything.
+if (!defined('BASE_URL')) {
+    $documentRoot = rtrim(str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT'] ?? ''), '/');
+    $siteRoot = rtrim(str_replace('\\', '/', dirname(__DIR__)), '/');
+    define('BASE_URL', substr($siteRoot, strlen($documentRoot)));
+}
 
 try {
     $pdo = new PDO(

@@ -2,14 +2,14 @@
 require_once __DIR__ . '/includes/auth.php';
 
 $explicitRedirect = isset($_GET['redirect']) || isset($_POST['redirect']);
-$redirect = $_GET['redirect'] ?? $_POST['redirect'] ?? '/emPIEsema/index.php';
+$redirect = $_GET['redirect'] ?? $_POST['redirect'] ?? BASE_URL . '/index.php';
 $error = '';
 
 function loginDestination(string $redirect, bool $explicitRedirect): string
 {
     // Admins land in the admin panel unless they were bounced here from a specific page.
     if (!$explicitRedirect && isAdmin()) {
-        return '/emPIEsema/admin/index.php';
+        return BASE_URL . '/admin/index.php';
     }
     return $redirect;
 }
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | emPIEsema</title>
 
-    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="style.css?v=17">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -96,15 +96,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <button type="submit" class="auth-submit">Login</button>
 
-            <p class="auth-switch">Don't have an account? <a href="/emPIEsema/signup.php?redirect=<?php echo urlencode($redirect); ?>">Sign up</a></p>
+            <p class="auth-switch">Don't have an account? <a href="<?php echo BASE_URL; ?>/signup.php?redirect=<?php echo urlencode($redirect); ?>">Sign up</a></p>
 
-            <a href="/emPIEsema/index.php" class="auth-back">← Back to shop</a>
+            <a href="<?php echo BASE_URL; ?>/index.php" class="auth-back">← Back to shop</a>
 
         </form>
 
     </div>
 
 </div>
+
+<?php include __DIR__ . '/includes/site-footer.php'; ?>
 
 </body>
 </html>

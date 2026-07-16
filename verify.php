@@ -11,7 +11,7 @@ $success = $token !== '' && verifyAccount($pdo, $token);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verify Email | emPIEsema</title>
 
-    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="style.css?v=17">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -36,20 +36,22 @@ $success = $token !== '' && verifyAccount($pdo, $token);
             <?php if ($success): ?>
                 <h1 class="welcome-heading">Email Verified</h1>
                 <p class="auth-sub">Your account is now active. You can log in.</p>
-                <a href="/emPIEsema/login.php" class="auth-submit" style="display:block; text-align:center; margin-top:8px; text-decoration:none;">Go to Login</a>
+                <a href="<?php echo BASE_URL; ?>/login.php" class="auth-submit" style="display:block; text-align:center; margin-top:8px; text-decoration:none;">Go to Login</a>
             <?php else: ?>
                 <h1 class="welcome-heading">Verification Failed</h1>
                 <p class="auth-sub">This verification link is invalid or has already been used.</p>
-                <a href="/emPIEsema/signup.php" class="auth-submit" style="display:block; text-align:center; margin-top:8px; text-decoration:none;">Back to Sign Up</a>
+                <a href="<?php echo BASE_URL; ?>/signup.php" class="auth-submit" style="display:block; text-align:center; margin-top:8px; text-decoration:none;">Back to Sign Up</a>
             <?php endif; ?>
 
-            <a href="/emPIEsema/index.php" class="auth-back">← Back to shop</a>
+            <a href="<?php echo BASE_URL; ?>/index.php" class="auth-back">← Back to shop</a>
 
         </div>
 
     </div>
 
 </div>
+
+<?php include __DIR__ . '/includes/site-footer.php'; ?>
 
 </body>
 </html>

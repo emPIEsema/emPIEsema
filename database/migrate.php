@@ -1,23 +1,50 @@
 <?php
+// Run once (from the browser or CLI) to create the database/tables
+// and populate them from database/empiesema_prod.php.
+//
+// Local (XAMPP): http://localhost/emPIEsema/database/migrate.php
+// Live (InfinityFree): create the database in vPanel first (this
+// account's MySQL user can't CREATE DATABASE on shared hosting), then
+// visit https://yourdomain.com/database/migrate.php
 
-$DB_HOST = 'localhost';
-$DB_USER = 'root';
-$DB_PASS = '';
+require __DIR__ . '/../includes/db-config.php';
 
 header('Content-Type: text/plain');
 
 try {
-    $pdo = new PDO("mysql:host={$DB_HOST};charset=utf8mb4", $DB_USER, $DB_PASS, [
+    // Try to create the database if the connection has permission to
+    // (works locally with root; silently skipped on shared hosting
+    // where the database must already exist, created via vPanel).
+    try {
+        $rootPdo = new PDO("mysql:host={$DB_HOST};charset=utf8mb4", $DB_USER, $DB_PASS, [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        ]);
+        $rootPdo->exec("CREATE DATABASE IF NOT EXISTS `{$DB_NAME}` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    } catch (PDOException $e) {
+        // No CREATE DATABASE privilege — fine, assume it already exists.
+    }
+
+    $pdo = new PDO("mysql:host={$DB_HOST};dbname={$DB_NAME};charset=utf8mb4", $DB_USER, $DB_PASS, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     ]);
 
     $schema = file_get_contents(__DIR__ . '/schema.sql');
     foreach (array_filter(array_map('trim', explode(';', $schema))) as $statement) {
-        $pdo->exec($statement);
+        // Strip SQL comment lines before checking what this statement is —
+        // otherwise a leading "-- comment" line hides the real statement
+        // from the check below (e.g. schema.sql's header comment glued
+        // onto the CREATE DATABASE line).
+        $cleaned = trim(preg_replace('/^\s*--.*$/m', '', $statement));
+
+        // Skip the CREATE DATABASE/USE lines in schema.sql — the
+        // connection above already selects the target database
+        // directly, and shared hosting won't allow either statement.
+        if ($cleaned === '' || preg_match('/^(CREATE DATABASE|USE)\b/i', $cleaned)) {
+            continue;
+        }
+        $pdo->exec($cleaned);
     }
     echo "Schema created.\n";
-
-    $pdo->exec('USE empiesema');
 
     $products = require __DIR__ . '/empiesema_prod.php';
 
