@@ -65,8 +65,18 @@ try {
 
     $adminHash = password_hash('admin123', PASSWORD_DEFAULT);
     $seedAdmin = $pdo->prepare(
+<<<<<<< HEAD
         'INSERT INTO accounts (username, password_hash, role, email_verified) VALUES (:username, :hash, :role, 1)
          ON DUPLICATE KEY UPDATE password_hash = :hash2, role = :role2, email_verified = 1'
+=======
+<<<<<<< HEAD
+        'INSERT INTO accounts (username, password_hash, role, email_verified) VALUES (:username, :hash, :role, 1)
+         ON DUPLICATE KEY UPDATE password_hash = :hash2, role = :role2, email_verified = 1'
+=======
+        'INSERT INTO accounts (username, password_hash, role) VALUES (:username, :hash, :role)
+         ON DUPLICATE KEY UPDATE password_hash = :hash2, role = :role2'
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
     );
     $seedAdmin->execute([
         ':username' => 'emPIEsema1',

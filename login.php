@@ -25,6 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($username === '' || $password === '') {
         $error = 'Please enter both username and password.';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
     } else {
         $result = attemptLogin($pdo, $username, $password);
         if ($result === 'ok') {
@@ -35,6 +39,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $error = 'Invalid username or password.';
         }
+<<<<<<< HEAD
+=======
+=======
+    } elseif (attemptLogin($pdo, $username, $password)) {
+        header('Location: ' . loginDestination($redirect, $explicitRedirect));
+        exit;
+    } else {
+        $error = 'Invalid username or password.';
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
     }
 }
 ?>

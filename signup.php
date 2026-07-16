@@ -1,5 +1,9 @@
 <?php
 require_once __DIR__ . '/includes/auth.php';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
 require_once __DIR__ . '/includes/mailer.php';
 
 $redirect = $_GET['redirect'] ?? $_POST['redirect'] ?? '/emPIEsema/index.php';
@@ -9,6 +13,15 @@ $username = '';
 $firstName = '';
 $lastName = '';
 $email = '';
+<<<<<<< HEAD
+=======
+=======
+
+$redirect = $_GET['redirect'] ?? $_POST['redirect'] ?? '/emPIEsema/index.php';
+$error = '';
+$username = '';
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
 
 if (isLoggedIn()) {
     header('Location: ' . $redirect);
@@ -17,6 +30,10 @@ if (isLoggedIn()) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username'] ?? '');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
     $firstName = trim($_POST['first_name'] ?? '');
     $lastName = trim($_POST['last_name'] ?? '');
     $email = trim($_POST['email'] ?? '');
@@ -31,6 +48,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'First and last name must not contain numbers or symbols.';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = 'Please enter a valid email address.';
+<<<<<<< HEAD
+=======
+=======
+    $password = $_POST['password'] ?? '';
+    $confirm = $_POST['confirm_password'] ?? '';
+
+    if ($username === '' || $password === '' || $confirm === '') {
+        $error = 'Please fill in all fields.';
+    } elseif (strlen($username) < 3) {
+        $error = 'Username must be at least 3 characters.';
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
     } elseif (strlen($password) < 6) {
         $error = 'Password must be at least 6 characters.';
     } elseif ($password !== $confirm) {
@@ -38,6 +67,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (usernameExists($pdo, $username)) {
         $error = 'That username is already taken.';
     } else {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
         $account = createAccount($pdo, $username, $password, 'customer', $firstName, $lastName, $email);
 
         $verifyUrl = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']
@@ -48,6 +81,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $error = 'Account created, but we could not send the verification email. Please contact support.';
         }
+<<<<<<< HEAD
+=======
+=======
+        createAccount($pdo, $username, $password, 'customer');
+        header('Location: ' . $redirect);
+        exit;
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
     }
 }
 ?>
@@ -78,6 +119,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
         <?php if ($success): ?>
         <div class="auth-card">
 
@@ -90,6 +135,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         </div>
         <?php else: ?>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
         <form class="auth-card" method="POST">
 
             <h1 class="welcome-heading">Join Us</h1>
@@ -102,6 +152,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="hidden" name="redirect" value="<?php echo htmlspecialchars($redirect); ?>">
 
             <div class="field-float">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
                 <label>First Name</label>
                 <div class="input-icon">
                     <i class="fa-regular fa-user"></i>
@@ -130,6 +184,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="input-icon">
                     <i class="fa-regular fa-envelope"></i>
                     <input type="text" name="username" placeholder="Choose a username" value="<?php echo htmlspecialchars($username); ?>" required minlength="3">
+<<<<<<< HEAD
+=======
+=======
+                <label>Username</label>
+                <div class="input-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="text" name="username" placeholder="Choose a username" value="<?php echo htmlspecialchars($username); ?>" required autofocus minlength="3">
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
                 </div>
             </div>
 
@@ -156,7 +219,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="/emPIEsema/index.php" class="auth-back">← Back to shop</a>
 
         </form>
+<<<<<<< HEAD
         <?php endif; ?>
+=======
+<<<<<<< HEAD
+        <?php endif; ?>
+=======
+>>>>>>> 0c6d304ba7fa2b3aabd4388a295d8bbe207c534a
+>>>>>>> 7630a55c3b37e16000825c99b1d344a7d9e4d13a
 
     </div>
 
